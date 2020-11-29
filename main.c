@@ -2,7 +2,11 @@
 
 int main(void)
 {
-    size_t size = sizeof(int);
-    printf( "%dバイト¥n", (int)(sizeof(long)));
-    return 0;
+	//	const変数の定義
+	const long cNum = 100;
+
+	//	変数の書き換えを行う
+	cNum = 50;
+
+	return 0;
 }
