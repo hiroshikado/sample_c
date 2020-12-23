@@ -2,13 +2,23 @@
 
 int main(void)
 {
-	int array[10] = {42,79,13};
+	enum week {
+		Mon,
+		Tue,
+		Wed,
+		Thu,
+		Fri,
+		Sat,
+		Sun
+	};
 	
-	printf("array[0] = %d\n",array[0]);
-	printf("array[1] = %d\n",array[1]);
-	printf("array[2] = %d\n",array[2]);
-	printf("array[3] = %d\n",array[3]);
-	printf("array[4] = %d\n",array[4]);
+	wk0 = Mon;
+	wk1 = Tue;
+	wk2 = Wed;
 	
+	printf("Monの値は: %d\n", wk0);
+	printf("Tueの値は: %d\n", wk1);
+	printf("Wedの値は: %d\n", wk2);
+
 	return 0;
 }
