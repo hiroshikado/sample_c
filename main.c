@@ -1,26 +1,26 @@
 #include <stdio.h>
+#include <string.h>
 
-int main(void)
-{
-	enum week {
-		Mon,
-		Tue,
-		Wed,
-		Thu,
-		Fri,
-		Sat,
-		Sun
-	};
-	
-	enum week wk0, wk1, wk2;
-	
-	wk0 = Mon;
-	wk1 = Tue;
-	wk2 = Wed;
-	
-	printf("Monの値は: %d\n", wk0);
-	printf("Tueの値は: %d\n", wk1);
-	printf("Wedの値は: %d\n", wk2);
+struct schedule {
+    int year;        /* 年 */
+    int month;       /* 月 */
+    int day;         /* 日 */
+    int hour;        /* 時 */
+    char title[100]; /* 表題 */
+};
 
-	return 0;
+int main() {
+    struct schedule exam;
+
+    /* 「2008/09/02 13:00 前期筆記試験」という情報を作成する */
+    exam.year  = 2008;
+    exam.month = 9;
+    exam.day   = 2;
+    exam.hour  = 13;
+    strcpy(exam.title, "前期筆記試験");
+
+    printf("%04d/%02d/%02d %02d:00 %s\n",
+           exam.year, exam.month, exam.day, exam.hour, exam.title);
+
+    return 0;
 }
