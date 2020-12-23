@@ -12,6 +12,8 @@ int main(void)
 		Sun
 	};
 	
+	enum week wk0, wk1, wk2;
+	
 	wk0 = Mon;
 	wk1 = Tue;
 	wk2 = Wed;
